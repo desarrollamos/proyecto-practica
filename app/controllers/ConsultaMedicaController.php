@@ -1,24 +1,33 @@
-<?php
+<?php 
 
 namespace App\Controllers;
 /**
  * Operations with Users: CRUD
  */
-
-class Especialista extends AbstractController{
-    /////variable
-    private  $id_especialista;
-    private  $nombre_especialista;
+class ConsultaMedicaController extends AbstractController
+{
+/////////////////Variables////////////
+private $id_consulta_medica;
+private $fecha_consulta;
 
 /////////////////Propiedades////////////
+
 ///////////GET///////////
-function getId_especialista(){return $this->Id_especialista;}
-function getNombre_especialista(){return $this->nombre_especilista;}
+
+function getId_consulta_medica(){return $this->id_consulta_medica;}
+function getfecha_consulta(){return $this->fecha_consulta;}
+
 ///////////SET///////////
-function setNombre_especialista($valor){$this->nombre_especialista=$valor;}
+
+function setId_consulta_medica($valor){$this->id_consulta_medica=$valor;}
+function setfecha_consulta($valor){$this->fecha_consulta=$valor;}
+
 ///////////METODOS////////
-function Especialista($ntu){//constructor
-$this-> Nombre_especialista=$ne;
+
+function ConsultaMedica($icm, $fc){//constructor
+$this->id_onculta_medica=$icm;
+$this->fecha_consulta=$fc;
+
 }
 
 public function addAction()
@@ -53,11 +62,9 @@ public function addAction()
      */
     public function deleteUserAction($userId)
     {
-
+       
+    }
 }
 }
-}
-
-
 
 ?>

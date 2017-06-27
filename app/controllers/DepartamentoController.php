@@ -1,24 +1,33 @@
-<?php
+<?php 
 
 namespace App\Controllers;
 /**
  * Operations with Users: CRUD
  */
-
-class Especialista extends AbstractController{
-    /////variable
-    private  $id_especialista;
-    private  $nombre_especialista;
+class DepartamentoController extends AbstractController
+{
+/////////////////Variables////////////            /////Falta por terminar //Arreglar//
+private $id_departamento;
+private $EmpresaUsuario_idEmpresaUsuario;
 
 /////////////////Propiedades////////////
+
 ///////////GET///////////
-function getId_especialista(){return $this->Id_especialista;}
-function getNombre_especialista(){return $this->nombre_especilista;}
+
+function getId_contrato(){return $this->id_consulta_medica;}
+function getEmpresaUsuario_idEmpresaUsuario(){return $this->EmpresaUsuario_idEmpresaUsuario;}
+
 ///////////SET///////////
-function setNombre_especialista($valor){$this->nombre_especialista=$valor;}
+
+function setId_contrato($valor){$this->id_consulta_medica=$valor;}
+function setEmpresaUsuario_idEmpresaUsuario($valor){$this->EmpresaUsuario_idEmpresaUsuario=$valor;}
+
 ///////////METODOS////////
-function Especialista($ntu){//constructor
-$this-> Nombre_especialista=$ne;
+
+function ContratoController($ic, $eie){//constructor
+$this->id_conrato=$ic;
+$this->EmpresaUsuario_idEmpresaUsuario=$eie;
+
 }
 
 public function addAction()
@@ -53,11 +62,9 @@ public function addAction()
      */
     public function deleteUserAction($userId)
     {
-
+       
+    }
 }
 }
-}
-
-
 
 ?>
