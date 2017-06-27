@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-
+//edicion
 class categoryController //extends AbstractController
 {
     
