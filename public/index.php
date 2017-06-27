@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?php
 
+=======
+
+<?php
+
+use App\Controllers\AbstractHttpException;
+
+>>>>>>> axel
 try {
   // Loading Configs
   $config = require(__DIR__ . '/../app/config/config.php');
@@ -20,7 +28,11 @@ try {
   // Setting up routing
   require __DIR__ . '/../app/config/routes.php';
 
+<<<<<<< HEAD
   // Making the correct answer after executing
+=======
+ // Making the correct answer after executing
+>>>>>>> axel
   $app->after(
     function () use ($app) {
       // Getting the return value of method
@@ -41,7 +53,11 @@ try {
       $app->response->send();
     }
 
+<<<<<<< HEAD
   // Processing request
+=======
+ // Processing request
+>>>>>>> axel
   $app->handle();
 } catch (AbstractHttpException $e) {
   $response = $app->response;
@@ -66,4 +82,10 @@ try {
   $app->response->setStatusCode(500, 'Internal Server Error')
                 ->setJsonContent($result)
                 ->send();
+<<<<<<< HEAD
 }
+=======
+}
+
+//////////////////////////////////////////////////
+>>>>>>> axel

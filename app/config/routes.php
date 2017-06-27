@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 //ejemplo de obtencion del controlador de un objeto
 
+=======
+>>>>>>> axel
 $usersCollection = new \Phalcon\Mvc\Micro\Collection();
 $usersCollection->setHandler('\App\Controllers\UsersController', true);
 $usersCollection->setPrefix('/user');
@@ -11,6 +14,7 @@ $usersCollection->put('/{userId:[1-9][0-9]*}', 'updateUserAction');
 $usersCollection->delete('/{userId:[1-9][0-9]*}', 'deleteUserAction');
 $app->mount($usersCollection);
 
+<<<<<<< HEAD
 //(en lo posible agregar un diferenciador, ej:EmpleadoCollection)
 $Collection = new \Phalcon\Mvc\Micro\Collection();
 $Collection->setHandler('\App\Controllers\(nombreControladorSinParentesis)Controller', true);
@@ -23,6 +27,9 @@ $app->mount($Collection);
 
 
 // si no se encuentran las urls
+=======
+// not found URLs
+>>>>>>> axel
 $app->notFound(
   function () use ($app) {
       $exception =
