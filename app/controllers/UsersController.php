@@ -24,7 +24,7 @@ private $fecha_edicion_usuario;
 
 ///////////GET///////////
 
-function getI_usuario(){return $this->id_usuario;}
+function getId_usuario(){return $this->id_usuario;}
 function getNombre_usuario(){return $this->nombre_usuario;}
 function getApellido_paterno_usuario(){return $this->apellido_paterno_usurio;}
 function getApellido_materno_usuario(){return $this->apellido_materno_usuario;}
@@ -37,7 +37,7 @@ function getFecha_edicion_usuario(){return $this->fecha_edicion_usuario;}
 
 ///////////SET///////////
 
-function setI_usuardio($valor){$this->id_usuario=$valor;}
+function setId_usuario($valor){$this->id_usuario=$valor;}
 function setNombre_usuario($valor){$this->nombre_usuario=$valor;}
 function setApellido_paterno_usuario($valor){$this->apellido_paterno_usuarioo=$valor;}
 function setApellido_materno_usuario($valor){$this->apellido_materno_usuarioo=$valor;}
@@ -51,7 +51,7 @@ function setFecha_edicion_usuario($valor){$this->fecha_edicion_usuario=$valor;}
 
 ///////////METODOS////////
 
-function Usuario($iu,$nu,$apu,$amu,$fn,$ru,$mu,$nau,$fcu,$feu){//constructor
+public function __construc($iu,$nu,$apu,$amu,$fn,$ru,$mu,$nau,$fcu,$feu){//constructor
 $this->id_usuario=$iu;
 $this->nombre_usuario=$nu;
 $this->apellido_paterno_usuario=$apu;
@@ -63,7 +63,13 @@ $this->nacionalidad_usuario=$nau;
 $this->fecha_creacion_usuario=$fcu;
 $this->fecha_edicion_usuario=$feu;
 
+
+
 }
+    function CargarTodosLosContactos(){
+////lenar el arreglo con consulta <mys>ql
+}
+
     public function addAction()
     {
           /** Init Block **/
