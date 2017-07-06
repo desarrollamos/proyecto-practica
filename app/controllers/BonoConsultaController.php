@@ -7,70 +7,55 @@ namespace App\Controllers;
 class BonoConsulta extends AbstractController
 {
 /////////////////Variables////////////
-private $id_bono_consulta;
-private $ConsultaMedica_id_consulta_medica;
-private $Paciente_id_paciente;
-private $Reserva_id_reserva;
+private $idBonoConsulta;
+private $ConsultaMedica_idConsultaMedica;
+private $Paciente_idPaciente;
+private $Reserva_idReserva;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
-p
-function getId_bono_consulta(){return $this->id_bono_consulta;}
-function getConsultaMedica_id_consulta_medica(){return $this->ConsultaMedica_id_consulta_medica;}
-function getPaciente_id_paciente(){return $this->Paciente_id_paciente;}
-function getReserva_id_reserva(){return $this->Reserva_id_reserva;}
+
+function getIdBonoConsulta(){return $this->idBonoConsulta;}
+function getConsultaMedica_idConsultaMedica(){return $this->ConsultaMedica_idConsultaMedica;}
+function getPaciente_idPaciente(){return $this->Paciente_idPaciente;}
+function getReserva_idReserva(){return $this->Reserva_idReserva;}
 ///////////SET///////////
 
-function setId_bono_consulta($valor){$this->id_bono_consulta=$valor;}
-function setConsultaMedica_id_consulta_medica($valor){$this->ConsultaMedica_id_consulta_medica=$valor;}
-function setPaciente_id_paciente($valor){$this->Paciente_id_paciente=$valor;}
-function setReserva_id_reserva($valor){$this->Reserva_id_reserva=$valor;}
+function setIdBonoConsulta($valor){$this->idBonoConsulta=$valor;}
+function setConsultaMedica_idConsultaMedica($valor){$this->ConsultaMedica_idConsultaMedica=$valor;}
+function setPaciente_idPaciente($valor){$this->Paciente_idPaciente=$valor;}
+function setReserva_idReserva($valor){$this->Reserva_idReserva=$valor;}
 
 ///////////METODOS////////
 
 function BonoConsulta($ibc, $cic, $pip, $rir){//constructor
-$this->id_bono_consulta=$ibc;
-$this->ConsultaMedica_id_consulta_medica=$cic;
-$this->Paciente_id_paciente=$pip;
-$this->Reserva_id_reserva=$rir;
+$this->idBonoConsulta=$ibc;
+$this->ConsultaMedica_idConsultaMedica=$cic;
+$this->Paciente_idPaciente=$pip;
+$this->Reserva_idReserva=$rir;
 
 }
 
-public function addAction()
+public function crearBonoConsulta()
     {
        
     }
 
-    /**
-     * Returns user list
-     *
-     * @return array
-     */
-    public function getUserListAction()
+public function obtenerBonoConsulta()
     {
        
     }
 
-     /**
-     * Updating existing user
-     *
-     * @param string $userId
-     */
-    public function updateUserAction($userId)
+public function modificarBonoConsulta($ibc)
     {
        
     }
 
-    /**
-     * Delete an existing user
-     *
-     * @param string $userId
-     */
-    public function deleteUserAction($userId)
+public function eliminarBonoConsulta($ibc)
     {
        
     }
 }
-}
+
 
 ?>

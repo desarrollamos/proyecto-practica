@@ -1,5 +1,13 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//ejemplo de obtencion del controlador de un objeto
+
+=======
+>>>>>>> axel
+>>>>>>> IvanTestBranch
 $usersCollection = new \Phalcon\Mvc\Micro\Collection();
 $usersCollection->setHandler('\App\Controllers\UsersController', true);
 $usersCollection->setPrefix('/user');
@@ -9,7 +17,26 @@ $usersCollection->put('/{userId:[1-9][0-9]*}', 'updateUserAction');
 $usersCollection->delete('/{userId:[1-9][0-9]*}', 'deleteUserAction');
 $app->mount($usersCollection);
 
+<<<<<<< HEAD
 // not found URLs
+=======
+<<<<<<< HEAD
+//(en lo posible agregar un diferenciador, ej:EmpleadoCollection)
+$Collection = new \Phalcon\Mvc\Micro\Collection();
+$Collection->setHandler('\App\Controllers\(nombreControladorSinParentesis)Controller', true);
+$Collection->setPrefix('/(insertar ruta sin parentesis)');
+$Collection->post('/add', 'add(tabla)');
+$Collection->get('/list', 'getList(tabla)');
+$Collection->put('/{userId(:[1-9][0-9]* restricciones)}', 'update(tabla)');
+$Collection->delete('/{userId(:[1-9][0-9]*)}', 'delete(tabla)');
+$app->mount($Collection);
+
+
+// si no se encuentran las urls
+=======
+// not found URLs
+>>>>>>> axel
+>>>>>>> IvanTestBranch
 $app->notFound(
   function () use ($app) {
       $exception =
