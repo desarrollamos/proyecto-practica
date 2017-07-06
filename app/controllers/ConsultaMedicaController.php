@@ -7,64 +7,53 @@ namespace App\Controllers;
 class ConsultaMedicaController extends AbstractController
 {
 /////////////////Variables////////////
-private $id_consulta_medica;
-private $fecha_consulta;
+private $idConsultaMedica;
+private $cmFecha;
+private $cmTitulo;
 
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getId_consulta_medica(){return $this->id_consulta_medica;}
-function getfecha_consulta(){return $this->fecha_consulta;}
+function getidConsultaMedica(){return $this->idConsultaMedica;}
+function getcmFecha(){return $this->cmFecha;}
+function getcmTitulo(){return $this->cmTitulo;}
 
 ///////////SET///////////
 
-function setId_consulta_medica($valor){$this->id_consulta_medica=$valor;}
-function setfecha_consulta($valor){$this->fecha_consulta=$valor;}
+function setidConsultaMedica($valor){$this->idConsultaMedica=$valor;}
+function setcmFecha($valor){$this->cmFecha=$valor;}
+function setcmTitulo($valor){$this->cmTitulo=$valor;}
 
 ///////////METODOS////////
 
-function ConsultaMedica($icm, $fc){//constructor
-$this->id_onculta_medica=$icm;
-$this->fecha_consulta=$fc;
+function ConsultaMedica($icm, $fc, $tc){ //constructor
+$this->idConsultaMedica=$icm;
+$this->cmFecha=$fc;
+$this->cmTitulo=$tc;
 
 }
 
-public function addAction()
+public function CrearConsultaMedica()
     {
        
     }
 
-    /**
-     * Returns user list
-     *
-     * @return array
-     */
-    public function getUserListAction()
+public function obtenerConsultaMedica($icm)
     {
        
     }
 
-     /**
-     * Updating existing user
-     *
-     * @param string $userId
-     */
-    public function updateUserAction($userId)
+public function modificarConsultaMedica($icm)
     {
        
     }
 
-    /**
-     * Delete an existing user
-     *
-     * @param string $userId
-     */
-    public function deleteUserAction($userId)
+public function eliminarConsultaMedica($icm)
     {
        
     }
 }
-}
+
 
 ?>

@@ -3,44 +3,44 @@
  class Actividad 
 {
 /////////////////Variables////////////
-private $id_actividad;
-private $nombre_actividad;
-private $detalle_actividad;
-private $fecha_creador_actividad;
-private $fecha_edicion_actividad;
+private $idActividad;
+private $acNombre;
+private $acDetalle;
+private $acFechaCreacion;
+private $acFechaEdicion;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getId_actividad(){return $this->id_actividad;}
-function getNombre_actividad(){return $this->nombre_actividad;}
-function getDetalle_actividad(){return $this->detalle_actividad;}
-function getFecha_creador_actividad(){return $this->fecha_creador_actividad;}
-function getFecha_edicion_actividad(){return $this->getFecha_edicion_actividad;}
+function getIdActividad(){return $this->idActividad;}
+function getAcNombre(){return $this->acNombre;}
+function getAcDetalle(){return $this->acDetalle;}
+function getAcFechaCreacion(){return $this->acFechaCreacion;}
+function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
 ///////////SET///////////
 
-function setId_actividad($valor){$this->id_actividad=$valor;}
-function setNombre_actividad($valor){$this->nombre_actividad=$valor;}
-function setDetalle_actividad($valor){$this->detale_actividad=$valor;}
-function setFecha_creador_actividad($valor){$this->fecha_creador_actividad=$valor;}
-function setFecha_edicion_actividad($valor){$this->fecha_edicion_actividad=$valor;}
+function setIdActividad($valor){$this->idActividad=$valor;}
+function setAcNombre($valor){$this->acNombre=$valor;}
+function setAcDetalle($valor){$this->detale_actividad=$valor;}
+function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
+function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
 
 
 
 ///////////METODOS////////
 
 function Actividad($na, $da, $fca, $fea){//constructor
-$this->nombre_actividad=$na;
-$this->detalle_actividad=$da;
-$this->fecha_creador_actividad=$fca;
-$this->fecha_edicion_actividad=$fea;
+$this->acNombre=$na;
+$this->acDetalle=$da;
+$this->acFechaCreacion=$fca;
+$this->acFechaEdicion=$fea;
 
 }
 
 function crearActividad(){
     //agregar funcion
 }
-function eliminarActividad(){
+function obtenerActividad(){
     //agregar funcion
 }
 function modificarActividad(){

@@ -14,7 +14,7 @@ class TipoUsuarioController extends AbstractController{
 function getId_tipo_usuario(){return $this->id_tipo_usuario;}
 function getNombre_tipo_usuario(){return $this->nombre_tipo_usuario;}
 ///////////SET///////////
-function setId_tipo_usuario()$valor){$this->id_tipo_usuario=$valor;}
+function setId_tipo_usuario($valor){$this->id_tipo_usuario=$valor;}
 function setNombre_tipo_usuario($valor){$this->nombre_tipo_usuario=$valor;}
 ///////////METODOS////////
 function TipoUsiario($itu, $ntu){//constructor
@@ -56,8 +56,6 @@ $this->nombre_tipo_usuario=$ntu;
        
     }
 }
-}
-
 
 
 ?>
