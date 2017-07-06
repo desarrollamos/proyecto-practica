@@ -5,63 +5,63 @@ namespace App\Controllers;
 /**
  * Operations with Users: CRUD
  */
-class UsersController extends AbstractController
+class UsuarioController extends AbstractController
 {
     /////////////////Variables////////////
 
-private $id_usuario;    
-private $nombre_usuario;
-private $apellido_paterno_usuario;
-private $apellido_materno_usuario;
-private $fecha_nacimiento;
-private $rut_usuario;
-private $mail_usuario;
-private $nacionalidad_usuario;
-private $fecha_creacion_usuario;
-private $fecha_edicion_usuario;
+private $idUsuario;    
+private $usNombre;
+private $usApellidoPaterno;
+private $usApellidoMaterno;
+private $usFechaNacimiento;
+private $usRut;
+private $usEMail;
+private $usNacionalidad;
+private $usFechaCreacion;
+private $usFechaMod;
 
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getId_usuario(){return $this->id_usuario;}
-function getNombre_usuario(){return $this->nombre_usuario;}
-function getApellido_paterno_usuario(){return $this->apellido_paterno_usurio;}
-function getApellido_materno_usuario(){return $this->apellido_materno_usuario;}
-function getFecha_nacimiento(){return $this->fecha_nacimiento;}
-function getRut_usuario(){return $this->rut_usuario;}
-function getMail_usuario(){return $this->mail_usuario;}
-function getNacionalidad_usuario(){return $this->nacionalidad_usuario;}
-function getFecha_creacion_usuario(){return $this->fecha_creacion_usuario;}
-function getFecha_edicion_usuario(){return $this->fecha_edicion_usuario;}
+function getIdUsuario(){return $this->idUsuario;}
+function getusNombre(){return $this->usNombre;}
+function getusApellidoPaterno(){return $this->usApellidoPaterno;}
+function getusApellidoMaterno(){return $this->usApellidoMaterno;}
+function getusFechaNacimiento(){return $this->usFechaNacimiento;}
+function getusRut(){return $this->usRut;}
+function getusEmail(){return $this->usEMail;}
+function getusNacionalidad(){return $this->usNacionalidad;}
+function getusFechaCreacion(){return $this->usFechaCreacion;}
+function getusFechaMod(){return $this->usFechaMod;}
 
 ///////////SET///////////
 
-function setId_usuario($valor){$this->id_usuario=$valor;}
-function setNombre_usuario($valor){$this->nombre_usuario=$valor;}
-function setApellido_paterno_usuario($valor){$this->apellido_paterno_usuarioo=$valor;}
-function setApellido_materno_usuario($valor){$this->apellido_materno_usuarioo=$valor;}
-function setFecha_nacimiento($valor){$this->fecha_nacimientoo=$valor;}
-function setRut_usuario($valor){$this->rut_usuario=$valor;}
-function setMail_usuario($valor){$this->mail_usuario=$valor;}
-function setNacionalidad_usuario($valor){$this->nacionalidad_usuario=$valor;}
-function setFecha_creacion_usuario($valor){$this->fecha_creacion_usuario=$valor;}
-function setFecha_edicion_usuario($valor){$this->fecha_edicion_usuario=$valor;}
+function setIdUsuario($valor){$this->idUsuario=$valor;}
+function setusNombre($valor){$this->usNombre=$valor;}
+function setusApellidoPaterno($valor){$this->usApellidoPaterno=$valor;}
+function setusApellidoMaterno($valor){$this->usApellidoMaterno=$valor;}
+function setusFechaNacimiento($valor){$this->usFechaNacimiento=$valor;}
+function setusRut($valor){$this->usRut=$valor;}
+function setusEmail($valor){$this->usEmail=$valor;}
+function setusNacionalidadUsuario($valor){$this->usNacionalidad=$valor;}
+function setusFechaCreacion($valor){$this->usFechaCreacion=$valor;}
+function setusFechaMod($valor){$this->FechaMod=$valor;}
 
 
 ///////////METODOS////////
 
-public function __construc($iu,$nu,$apu,$amu,$fn,$ru,$mu,$nau,$fcu,$feu){//constructor
-$this->id_usuario=$iu;
-$this->nombre_usuario=$nu;
-$this->apellido_paterno_usuario=$apu;
-$this->apellido_materno_usuario=$amu;
-$this->fecha_nacimiento=$fn;
-$this->rut_usuario=$ru;
-$this->mail_usuario=$mu;
-$this->nacionalidad_usuario=$nau;
-$this->fecha_creacion_usuario=$fcu;
-$this->fecha_edicion_usuario=$feu;
+function __construc($iu,$nu,$apu,$amu,$fn,$ru,$mu,$nau,$fcu,$feu){//constructor
+$this->idUsuario=$iu;
+$this->usNombre=$nu;
+$this->usApellidoPaterno=$apu;
+$this->usApellidoMaterno=$amu;
+$this->usFechaNacimiento=$fn;
+$this->usRut=$ru;
+$this->usEmail=$mu;
+$this->usNacionalidad=$nau;
+$this->usFechaCreacion=$fcu;
+$this->usFechaMod=$feu;
 
 
 
