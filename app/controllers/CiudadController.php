@@ -7,76 +7,43 @@ namespace App\Controllers;
 class CiudadController extends AbstractController
 {
 /////////////////Variables////////////
-private $id_Ciudad;
-private $Nombre_ciudad;
-private $fecha_creador_ciudad;
-private $fecha_edicion_ciudad;
-private $Paciente_id_paciente;
+private $idCiudad;
+private $cdDetalle;
+private $Provincia_idProvincia;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getId_ciudad(){return $this->id_ciudad;}
-function getNombre_ciudad(){return $this->nombre_ciudad;}
-function getfecha_creador_ciudad(){return $this->fecha_creador_ciudad;}
-function getfecha_edicion_ciudad(){return $this->fecha_edicion_ciudad;}
-function getPaciente_id_paciente(){return $this->Paciente_id_paciente;}
+function getIdCiudad(){return $this->idCiudad;}
+function getcdDetalle(){return $this->cdDetalle;}
+function getProvincia_idProvincia(){return $this->Provincia_idProvincia;}
 
 ///////////SET///////////
 
-function setId_ciudad($valor){$this->id_ciudads=$valor;}
-function setNombre_ciudad($valor){$this->nombre_ciudad=$valor;}
-function setfecha_creador_ciudad($valor){$this->fecha_creador_ciudad=$valor;}
-function setfecha_edicion_ciudad($valor){$this->edicion_ciudad=$valor;}
-function setPaciente_id_paciente($valor){$this->paciente_id_pacienter=$valor;}
+function setidCiudad($valor){$this->idCiudad=$valor;}
+function setcdDetalle($valor){$this->cdDetalle=$valor;}
+function setProvincia_idProvincia($valor){$this->Provincia_idProvincia=$valor;}
 
 
 ///////////METODOS////////
 
-function Ciudad($ic, $nc, $fcc, $fec, $pip){//constructor
-$this->id_ciudad=$ic;
-$this->nombre_ciudad=$nc;
-$this->fecha_creador_ciudad=$fcc;
-$this->fecha_edicion_ciudad=$fec;
-$thi->paciente_id_paciente=$pip;
+function Ciudad($ic, $dc, $pip){//constructor
+$this->idCiudad=$ic;
+$this->cdDetalle=$dc;
+$this->Provincia_idProvincia=$pip;
 
 }
 
-public function addAction()
+public function agregarCiudad()
     {
        
     }
 
-    /**
-     * Returns user list
-     *
-     * @return array
-     */
-    public function getUserListAction()
+public function obtenerCiudad($ic)
     {
        
     }
 
-     /**
-     * Updating existing user
-     *
-     * @param string $userId
-     */
-    public function updateUserAction($userId)
-    {
-       
-    }
-
-    /**
-     * Delete an existing user
-     *
-     * @param string $userId
-     */
-    public function deleteUserAction($userId)
-    {
-       
-    }
-}
 }
 
 ?>
