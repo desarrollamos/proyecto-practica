@@ -6,18 +6,26 @@ namespace App\Controllers;
  */
 class TipoUsuarioController extends AbstractController{
     /////variable
-    private  $id_tipo_usuario;
-    private  $nombre_tipo_usuario;
+    private  $idTipoUsuario;
+    private  $tuNombre;
+    private $Usuario_idUsuario;
 
 /////////////////Propiedades////////////
 ///////////GET///////////
-function getId_tipo_usuario(){return $this->id_tipo_usuario;}
-function getNombre_tipo_usuario(){return $this->nombre_tipo_usuario;}
+function getIdTipoUsuario(){return $this->idTipoUsuario;}
+function gettuNombre(){return $this->tuNombre;}
+function getUsuario_idUsuario(){return $this->Usuario_idUsuario;}
 ///////////SET///////////
+<<<<<<< HEAD
+function setIdTipoUsuario($valor){$this->idTipoUsuario=$valor;}
+function settuNombre($valor){$this->tuNombre=$valor;}
+function setUsuario_idUsuario($valor){$this->Usuario_idUsuario=$valor;}
+=======
 function setId_tipo_usuario($valor){$this->id_tipo_usuario=$valor;}
 function setNombre_tipo_usuario($valor){$this->nombre_tipo_usuario=$valor;}
+>>>>>>> IvanTestBranch
 ///////////METODOS////////
-function TipoUsiario($itu, $ntu){//constructor
+public function __constructor($itu, $ntu, ){//constructor
 $this->id_tipo_usuario=$itu;
 $this->nombre_tipo_usuario=$ntu;
 }

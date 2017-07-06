@@ -1,30 +1,35 @@
 <?php 
 
-
- class ContactoUsuario
+ 
+ class ContactoUsuarioController
 {
 /////////////////Variables////////////
-private $id_contacto_usuario;
-private $key;
-private $value;
+private $idContactoUsuario;
+private $cuKey;
+private $cuValue;
+private $Usuario_idUsuario;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
-function getId_contacto_usuario(){return $this->id_contacto_usuario;}
-function getKey(){return $this->key;}
-function getValue(){return $this->value;}
+function getIdContactoUsuario(){return $this->idContactoUsuario;}
+function getCuKey(){return $this->cuKey;}
+function getCuValue(){return $this->cuValue;}
+function getUsuario_idUsuario(){return $this->Usuario_idUsuario;} 
 
 ///////////SET///////////
 
-function setKey($valor){$this->Key=$valor;}
-function setValue($valor){$this->Value=$valor;}
+function setIdContactoUsuario($valor){$this->idContactoUsuario=$valor;}
+function setCuKey($valor){$this->cuKey=$valor;}
+function setCuValue($valor){$this->cuValue=$valor;}
+function setUsuario_idUsuario($valor){$this->Usuario_idUsuario;}
 
 ///////////METODOS////////
 
-function Usuario($icu,$k,$v){//constructor
-$this->id_contacto_usuario=$icu;
-$this->key=$k;
-$this->value=$v;
+public function __constructor($icu,$ck,$cv, $uiu){//constructor
+$this->idContactoUsuario=$icu;
+$this->cuKey=$ck;
+$this->value=$cv;
+$this->Usuario_idUsuario=$uiu;
 
 }
 
