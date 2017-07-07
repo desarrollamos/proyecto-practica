@@ -25,7 +25,7 @@ function setUsuario_idUsuario($valor){$this->Usuario_idUsuario;}
 
 ///////////METODOS////////
 
-public function __constructor($icu,$ck,$cv, $uiu){//constructor
+function __constructor($icu,$ck,$cv, $uiu){//constructor
 $this->idContactoUsuario=$icu;
 $this->cuKey=$ck;
 $this->value=$cv;

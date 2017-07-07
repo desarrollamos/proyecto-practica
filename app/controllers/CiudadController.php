@@ -8,28 +8,28 @@ class CiudadController extends AbstractController
 {
 /////////////////Variables////////////
 private $idCiudad;
-private $cdDetalle;
+private $cdNombre;
 private $Provincia_idProvincia;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
 function getIdCiudad(){return $this->idCiudad;}
-function getcdDetalle(){return $this->cdDetalle;}
+function getcdNombre(){return $this->cdNombre;}
 function getProvincia_idProvincia(){return $this->Provincia_idProvincia;}
 
 ///////////SET///////////
 
 function setidCiudad($valor){$this->idCiudad=$valor;}
-function setcdDetalle($valor){$this->cdDetalle=$valor;}
+function setcdNombre($valor){$this->cdNombre=$valor;}
 function setProvincia_idProvincia($valor){$this->Provincia_idProvincia=$valor;}
 
 
 ///////////METODOS////////
 
-function Ciudad($ic, $dc, $pip){//constructor
+function __construct($ic, $nc, $pip){//constructor
 $this->idCiudad=$ic;
-$this->cdDetalle=$dc;
+$this->cdNombre=$dc;
 $this->Provincia_idProvincia=$pip;
 
 }
