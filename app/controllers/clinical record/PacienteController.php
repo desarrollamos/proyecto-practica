@@ -21,7 +21,7 @@ function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
 
 function setIdActividad($valor){$this->idActividad=$valor;}
 function setAcNombre($valor){$this->acNombre=$valor;}
-function setAcDetalle($valor){$this->acDetalle=$valor;}
+function setAcDetalle($valor){$this->detale_actividad=$valor;}
 function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
 function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
 
@@ -29,8 +29,7 @@ function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
 
 ///////////METODOS////////
 
-function __construct($ia, $na, $da, $fca, $fea){//constructor
-$this->idActividad=$ia;
+function __construct($na, $da, $fca, $fea){//constructor
 $this->acNombre=$na;
 $this->acDetalle=$da;
 $this->acFechaCreacion=$fca;
