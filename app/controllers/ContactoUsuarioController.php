@@ -25,11 +25,7 @@ function setUsuario_idUsuario($valor){$this->Usuario_idUsuario;}
 
 ///////////METODOS////////
 
-<<<<<<< HEAD:app/controllers/ContactoUsuarioController.php
 function __constructor($icu,$ck,$cv, $uiu){//constructor
-=======
-function __construct($icu,$ck,$cv, $uiu){//constructor
->>>>>>> IvanTestBranch:app/controllers/auth/ContactoUsuarioController.php
 $this->idContactoUsuario=$icu;
 $this->cuKey=$ck;
 $this->value=$cv;

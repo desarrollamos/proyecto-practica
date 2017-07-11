@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 
  class Actividad 
@@ -22,7 +21,7 @@ function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
 
 function setIdActividad($valor){$this->idActividad=$valor;}
 function setAcNombre($valor){$this->acNombre=$valor;}
-function setAcDetalle($valor){$this->acDetalle=$valor;}
+function setAcDetalle($valor){$this->detale_actividad=$valor;}
 function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
 function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
 
@@ -30,8 +29,7 @@ function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
 
 ///////////METODOS////////
 
-function __construct($ia, $na, $da, $fca, $fea){//constructor
-$this->idActividad=$ia;
+function Actividad($na, $da, $fca, $fea){//constructor
 $this->acNombre=$na;
 $this->acDetalle=$da;
 $this->acFechaCreacion=$fca;
@@ -52,33 +50,3 @@ function modificarActividad(){
 }
 
 ?>
-=======
-<?php
-
-namespace App\Controllers;
-
-
-class stockController //extends AbstractController
-{
-    
-    public function addStock()
-    {
-       
-    }
-
-    public function getStockList()
-    {
-       
-    }
-
-    public function updateStock($StockID)
-    {
-       
-    }
-
-    public function deleteStock($StockID)
-    {
-       
-    }
-}
->>>>>>> parent of 7800636... Cambios
