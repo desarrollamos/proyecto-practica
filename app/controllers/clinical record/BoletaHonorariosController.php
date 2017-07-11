@@ -33,7 +33,7 @@ function setConsultaMedica_idConsultaMedica($valor){$this->ConsultaMedica_idCons
 
 ///////////METODOS////////
 
-function BoletaHonorarios($idbh, $dbh, $vbh, $tbh, $cic){//constructor
+function __construct($idbh, $dbh, $vbh, $tbh, $cic){//constructor
 $this->idBoletaHonorario=$idbh;
 $this->bhDescripcion=$dbh;
 $this->bhValor=$vbh;

@@ -32,7 +32,11 @@ function setEspecialista_idEspecialista($valor){this->setEspecialista_idEspecial
 
 ///////////METODOS////////
 
+<<<<<<< HEAD:app/controllers/BonoConsultaController.php
 function __construc($ibc, $cic, $pip, $rir, $cic){//constructor
+=======
+function __construct($ibc, $cic, $pip, $rir){//constructor
+>>>>>>> IvanTestBranch:app/controllers/clinical record/BonoConsultaController.php
 $this->idBonoConsulta=$ibc;
 $this->ConsultaMedica_idConsultaMedica=$cic;
 $this->Paciente_idPaciente=$pip;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace App\Controllers;
@@ -17,30 +18,55 @@ private $ruFechaCreacion;
 private $ruFechaMod;
 private $conn;
 private $reservausuario;
+=======
+<?php 
+
+ class ReservaUsuario 
+{
+/////////////////Variables////////////
+
+private $idReservaUsuario;
+private $ruNombre;
+private $Reserva_idReserva;
+private $Usuario_idUsuario;
+>>>>>>> master
 
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
 function getIdReservaUsuario(){return $this->idReservaUsuario;}
+<<<<<<< HEAD
 function getruNombre(){return $this->ruNombre;}
 function getReserva_idReserva(){return $this->Reserva_idReserva;}
 function getUsuario_idUsuario(){return $this->Usuario_idUsuario;}
 function getruFechaCreacion(){return $this->ruFechaCreacion;}
 function getruFechaMod(){return $this->ruFechaMod;}
+=======
+function getRuNombre(){return $this->ruNombre;}
+function getReserva_idReserva(){return $this->Reserva_idReserva;}
+function getUsuario_idUsuario(){return $this->Usuario_idUsuario;}
+>>>>>>> master
 
 ///////////SET///////////
 
 function setIdReservaUsuario($valor){$this->idReservaUsuario=$valor;}
+<<<<<<< HEAD
 function setruNombre($valor){$this->ruNombre=$valor;}
 function setReserva_idReserva($valor){$this->Reserva_idReserva=$valor;}
 function setUsuario_idUsuario($valor){$this->Usuario_idUsuario=$valor;}
 function setruFechaCreacion($valor){$this->ruFechaCreacion=$valor;}
 function setruFechaMod($valor){$this->ruFechaMod=$valor;}
+=======
+function setRuNombre($valor){$this->ruNombre=$valor;}
+function setReserva_idReserva($valor){$this->Reserva_idReserva=$valor;}
+function setUsuario_idUsuario($valor){$this->Usuario_idUsuario=$valor;}
+>>>>>>> master
 
 
 ///////////METODOS////////
 
+<<<<<<< HEAD
 function Usuario($iru,$rn, $rir, $uiu, $rfc, $rfm){//constructor
 $this->idReservaUsuario=$iru;
 $this->ruNombre=$rn;
@@ -124,3 +150,23 @@ function borrarReservaUsuario(){
 
 }
 }
+=======
+function __construct($ira, $nru, $rir, $uiu){//constructor
+$this->idReservaUsuario=$ira;
+$this->ruNombre=$nru;
+$this->Reserva_idReserva=$rir;
+$this->Usuario_idUsuario=$uiu;
+
+}
+
+function crearReservaUsuario(){
+    //agregar funcion
+}
+function obtenerReservaUsuario(){
+    //agregar funcion
+}
+
+}
+
+?>
+>>>>>>> master

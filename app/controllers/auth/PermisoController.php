@@ -11,8 +11,11 @@ private $idPermiso;
 private $pmR;
 private $pmW;
 private $pmX;
+<<<<<<< HEAD
 private $conn;
 private $permiso;
+=======
+>>>>>>> master
 /////////////////Propiedades////////////
 
 ///////////GET///////////
@@ -26,6 +29,7 @@ function getpmX(){return $this->pmX;}
 
 function setIdPermiso($valor){$this->idPermiso=$valor;}
 function setpmR($valor){$this->pmR=$valor;}
+<<<<<<< HEAD
 function setpmW($valor){$this->pmW=$valor;}
 function setpmx($valor){$this->pmX=$valor;}
 
@@ -50,5 +54,38 @@ $this->Permiso=array();
 
 }
 }
+=======
+function setpmW($valor){$this->pmX=$valor;}
+function setpmX($valor){$this->pmX=$valor;}
+
+
+
+///////////METODOS////////
+
+function __construct($ip, $rp, $xp, $wp){//constructor
+$this->idPermiso=$ip;
+$this->pmR=$rp;
+$this->pmX=$xp;
+$this->pmW=$wp;
+
+}
+
+public function AgregarPermiso()
+    {
+       
+    }
+
+public function ObtenerPermiso()
+    {
+       
+    }
+
+public function EliminarPermiso($userId)
+    {
+       
+    }
+}
+
+>>>>>>> master
 
 ?>

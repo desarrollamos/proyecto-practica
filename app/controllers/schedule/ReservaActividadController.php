@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace App\Controllers;
@@ -17,15 +18,31 @@ private $conn;
 private $reservaactividad;
 private $raFechaCreacion;
 private $raFechaMod;
+=======
+<?php 
+
+ class ReservaActividad 
+{
+/////////////////Variables////////////
+
+private $idReservaActividad;
+private $raCantidad;
+private $Reserva_idReserva;
+private $Actividad_idActividad;
+>>>>>>> master
 
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
 function getIdReservaActividad(){return $this->idReservaActividad;}
+<<<<<<< HEAD
 function getraCantidad(){return $this->raCantidad;}
 function getraFechaCreacion(){return $this->raFechaCreacion;}
 function getraFechaMod(){return $this->raFechaMod;}
+=======
+function getRaCantidad(){return $this->raCantidad;}
+>>>>>>> master
 function getReserva_idReserva(){return $this->Reserva_idReserva;}
 function getActividad_idActividad(){return $this->Actividad_idActividad;}
 
@@ -33,6 +50,7 @@ function getActividad_idActividad(){return $this->Actividad_idActividad;}
 
 function setIdReservaActividad($valor){$this->idReservaActividad=$valor;}
 function setraCantidad($valor){$this->raCantidad=$valor;}
+<<<<<<< HEAD
 function setraFechaCreacion($valor){$this->raFechaCreacion=$valor;}
 function setraFechaMod($valor){$this->raFechaMod=$valor;}
 function setReserva_idReserva($valor){$this->Reserva_idReserva=$valor;}
@@ -124,3 +142,29 @@ function borrarReserva(){
 
 }
 }
+=======
+function setReserva_idReserva($valor){$this->Reserva_idReserva=$valor;}
+function setActividad_idActividad($valor){$this->Actividad_idActividad=$valor;}
+
+
+///////////METODOS////////
+
+function __construct($ira, $cra, $rir, $aia){//constructor
+$this->idReservaActividad=$ira;
+$this->raCantidad=$cra;
+$this->Reserva_idReserva=$rir;
+$this->Actividad_idActividad=$aia;
+
+}
+
+function crearReservaActividad(){
+    //agregar funcion
+}
+function obtenerReservaActividad(){
+    //agregar funcion
+}
+
+}
+
+?>
+>>>>>>> master

@@ -31,7 +31,11 @@ function setReserva_idReserva($valor){return $this->Reserva_idReserva;}
 
 ///////////METODOS////////
 
+<<<<<<< HEAD:app/controllers/ConsultaMedicaController.php
 function __construct($icm, $fc, $tc, $eie, $hih, $rir){ //constructor
+=======
+function __construct($icm, $fc, $tc){ //constructor
+>>>>>>> IvanTestBranch:app/controllers/clinical record/ConsultaMedicaController.php
 $this->idConsultaMedica=$icm;
 $this->cmFecha=$fc;
 $this->cmTitulo=$tc;
