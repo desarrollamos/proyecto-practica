@@ -1,53 +1,146 @@
 <?php 
 
- class Actividad 
+ class Stock 
 {
 /////////////////Variables////////////
-private $idActividad;
-private $acNombre;
-private $acDetalle;
-private $acFechaCreacion;
-private $acFechaEdicion;
+
+private $stock;
+private $conn;
+private $idStock;
+private $stCantidadTotal;
+private $stCantidadDisponible;
+private $stFechaCreacion;
+private $stFechaModificacion;
+private $Producto_idProducto;
+
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getIdActividad(){return $this->idActividad;}
-function getAcNombre(){return $this->acNombre;}
-function getAcDetalle(){return $this->acDetalle;}
-function getAcFechaCreacion(){return $this->acFechaCreacion;}
-function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
+function getIdStock(){return $this->idStock;}
+function getstCantidadTotal(){return $this->stCantidadTotal;}
+function getstCantidadDisponible(){return $this->stCantidadDisponible;}
+function getstFechaCreacion(){return $this->stFechaCreacion;}
+function getstFechaModificacion(){return $this->stFechaModificacion;}
+function getProducto_idProducto(){return $this->Producto_idProducto;}
+
 ///////////SET///////////
 
-function setIdActividad($valor){$this->idActividad=$valor;}
-function setAcNombre($valor){$this->acNombre=$valor;}
-function setAcDetalle($valor){$this->acDetalle=$valor;}
-function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
-function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
+function setIdStock($valor){$this->idStock=$valor;}
+function setstCantidadTotal($valor){$this->stCantidadTotal=$valor;}
+function setstCantidadDisponible($valor){$this->stCantidadDisponible=$valor;}
+function setstFechaCreacion($valor){$this->stFechaCreacion=$valor;}
+function setstFechaModificacion($valor){$this->stFechaModificacion=$valor;}
+function setProducto_idProducto($valor){$this->Producto_idProducto=$valor;}
 
+///////////CONSTRUCTOR///////////                                                                      
 
+public function __construct($is, $cts, $cds, $fcs, $fms, $pip){
+		
+    $this->stock=array();
+    // Crear conexión
+    $this->conn=mysqli_connect("localhost","root","","modelopractica1");
+        // Checkear conexión
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+    $this->idStock=$is;
+    $this->stCantidadTotal=$cts;
+    $this->stCantidadDisponible=$cds;
+    $this->stFechaCreacion=$fcs;
+    $this->stFechaModificacion=$fms;
+    $this->Producto_idProducto=$pip;
+}
 
-///////////METODOS////////
+///////////METODOS//////// 
 
-function __construct($ia, $na, $da, $fca, $fea){//constructor
-$this->idActividad=$ia;
-$this->acNombre=$na;
-$this->acDetalle=$da;
-$this->acFechaCreacion=$fca;
-$this->acFechaEdicion=$fea;
+function agregarStock($cts, $cds, $fcs, $fms, $pip){
+    
+    $sql = "INSERT INTO Stock (stCantidadTotal , stCantidadDisponible, stFechaCreacion, stFechaModificacion, Producto_idProducto)
+            VALUES ('$cts' , '$cds', '$fcs', '$fms', '$pip')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Stock agregado con exito!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+function modificarStock($is , $cts, $cds, $fcs, $fms, $pip){
+    
+    $sql = "UPDATE Stock 
+            SET stCantidadTotal='$cts' , stCantidadDisponible='$cds' , stFechaCreacion='$fcs' , stFechaModificacion='$fms', 
+                Producto_idProducto='$pip'
+            WHERE idStock='$is'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Stock modificado con exito!";
+    } else {
+        echo "Error al actualizar los datos: " . $conn->error;
+    }
+
+    $conn->close();
 
 }
 
-function crearActividad(){
-    //agregar funcion
+function obtenerStock(){
+    
+    $sql = "SELECT * FROM Stock";
+    
+    $result=mysqli_query($this->conn,$sql);
+
+    if ($result) {
+        while($registro=mysqli_fetch_assoc($result)){
+			$this->stock[]=$registro;
+			}
+			
+			return $this->stock;
+    } else {
+        echo "error: " . mysqli_errno($this->con) . " -- " . mysqli_error($this->con);
+			die;
+    }
+
+    $conn->close();
 }
-function obtenerActividad(){
-    //agregar funcion
-}
-function modificarActividad(){
-    //agregar funcion
+
+
+function obtenerStockPorId($is){
+    
+    $sql = "SELECT * FROM Stock WHERE idStock='$is'";
+    
+    $result=mysqli_query($this->conn,$sql);
+
+    if ($result) {
+        while($registro=mysqli_fetch_assoc($result)){
+			$this->stock[]=$registro;
+			}
+			
+			return $this->stock;
+    } else {
+        echo "error: " . mysqli_errno($this->con) . " -- " . mysqli_error($this->con);
+			die;
+    }
+
+    $conn->close();
 
 }
+
+function borrarStock($is){
+    
+    $sql = "DELETE FROM Stock WHERE idStock='$is'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Stock eliminado con exito!";
+    } else {
+        echo "Error al intentar eliminar el Stock: " . $conn->error;
+    }
+
+    $conn->close();
+
+}
+
 }
 
 ?>

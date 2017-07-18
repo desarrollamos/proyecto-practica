@@ -22,7 +22,7 @@ function getEspecialidad_idEspecialidad(){return $this->Especialidad_idEspeciali
 
 function setIdEmpresaEspecialidad($valor){$this->idEmpresaEspecialidad=$valor;}
 function setEmpresa_idEmpresa($valor){$this->Empresa_idEmpresa=$valor;}
-function setEspecialidad_idEspecialidad($valor){$this->detale_EmpresaEspecialidad=$valor;}
+function setEspecialidad_idEspecialidad($valor){$this->Especialidad_idEspecialidad=$valor;}
 
 ///////////CONSTRUCTOR///////////                                                                      
 
