@@ -1,40 +1,34 @@
-<?php
-
-namespace App\Controllers;
-/**
- * Operations with Users: CRUD
- */
-
-class EspecialidadUsuario extends AbstractController{
-    /////variable
-    private  $idEspecialidadUsuario;
-    private  $euNombre;
-
-/////////////////Propiedades////////////
-///////////GET///////////
-function getIdEspecialidadUsuario(){return $this->idEspecialidadUsuario;}
-function getEuNombre(){return $this->euNombre;}
-///////////SET///////////
-function setEuNombre($valor){$this->euNombre=$valor;}
-///////////METODOS////////
-function EspecialidadUsuario($neu){//constructor
-$this->euNombre=$neu;
-}
-
-public function crearEspeclialidadUsuario()
-    {
+<?php 
+	/**
+	* Descripción: Controlador para la entidad EspecialidadUsuario
+	* Autor: Axel castro
+	* Web: desarrollamos.cl
+	* Fecha: 19-07-2017
+	*/
+	class EspecialidadUsuarioController
+	{	
+		public function __construct(){}
+ 
+		public function index(){
+			echo 'index desde EspecialidadUsuarioController';
+		}
+ 
+		public function register(){
+			echo 'register desde EspecialidadUsuarioConroller';
+		}
+ 
+		public function update(){
+			echo 'update desde EspecialidadUsuarioConroller';
+ 
+		}
+ 
+		public function delete(){
+			echo 'delete desde EspecialidadUsuarioConroller';
+		}
+		
+		public function error(){
+			require_once('Views/EspecialidadUsuario/error.php');
+		} 
        
-    }
-
-public function ObtenerEspecialidadUsuario()
-    {
-       
-    }
-
-public function eliminarEspecialidadUsuario($userId)
-    {
-       
-    }
-}
-
+	}
 ?>

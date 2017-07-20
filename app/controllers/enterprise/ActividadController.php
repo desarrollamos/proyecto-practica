@@ -1,52 +1,34 @@
 <?php 
-
- class Actividad 
-{
-/////////////////Variables////////////
-private $idActividad;
-private $acNombre;
-private $acDetalle;
-private $acFechaCreacion;
-private $acFechaEdicion;
-/////////////////Propiedades////////////
-
-///////////GET///////////
-
-function getIdActividad(){return $this->idActividad;}
-function getAcNombre(){return $this->acNombre;}
-function getAcDetalle(){return $this->acDetalle;}
-function getAcFechaCreacion(){return $this->acFechaCreacion;}
-function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
-///////////SET///////////
-
-function setIdActividad($valor){$this->idActividad=$valor;}
-function setAcNombre($valor){$this->acNombre=$valor;}
-function setAcDetalle($valor){$this->detale_actividad=$valor;}
-function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
-function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
-
-
-
-///////////METODOS////////
-
-function Actividad($na, $da, $fca, $fea){//constructor
-$this->acNombre=$na;
-$this->acDetalle=$da;
-$this->acFechaCreacion=$fca;
-$this->acFechaEdicion=$fea;
-
-}
-
-function crearActividad(){
-    //agregar funcion
-}
-function obtenerActividad(){
-    //agregar funcion
-}
-function modificarActividad(){
-    //agregar funcion
-
-}
-}
-
+	/**
+	* Descripción: Controlador para la entidad Actividad
+	* Autor: Axel castro
+	* Web: desarrollamos.cl
+	* Fecha: 19-07-2017
+	*/
+	class ActividadController
+	{	
+		public function __construct(){}
+ 
+		public function index(){
+			echo 'index desde ActividadController';
+		}
+ 
+		public function register(){
+			echo 'register desde ActividadConroller';
+		}
+ 
+		public function update(){
+			echo 'update desde ActividadConroller';
+ 
+		}
+ 
+		public function delete(){
+			echo 'delete desde ActividadConroller';
+		}
+		
+		public function error(){
+			require_once('Views/Actividad/error.php');
+		} 
+       
+	}
 ?>

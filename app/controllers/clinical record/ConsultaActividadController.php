@@ -1,69 +1,34 @@
-<?php
-
-namespace App\Controllers;
-
-/**
- * Operations with Users: CRUD
- */
-class ConsultaActividadController extends AbstractController
-{
-    /////////////////Variables////////////
-private $idConsultaActividad;    
-private $caFecha;
-private $ConsultaMedica_idConsultaMedica;
-private $Actividad_idActividad;
-/////////////////Propiedades////////////
-///////////GET///////////
-function getIDConsultaActividad(){return $this->idConsultaActividad;}
-function getcaFecha(){return $this->caFecha;}
-function getConsultaMedica_idConsultaMedica(){return $this->ConsultaMedica_idConsultaMedica;}
-function getActividad_idActividad(){return $this->Actividad_idActividad;}
-///////////SET///////////
-function setIdConsultaActividad($valor){$this->idConsultaActividad=$valor;}
-function setcaFecha($valor){$this->caFecha=$valor;}
-function setConsultaMedica_idConsultaMedica($valor){$this->ConsultaMedica_idConsultaMedica=$valor;}
-function setActividad_idActividad($valor){$this->Actividad_idActividad=$valor;}
-///////////METODOS////////
-function __construct($ica, $caf, $cic, $aia){//constructor
-$this->idConsultaActividad=$iu;
-$this->caFecha=$caf;
-$this->ConsultaMedica_idConsultaMedica=$cic;
-$this->Actividad_idActividad=$aia;
-
-
-}
-    public function addAction()
-    {
-
-    }
-
-    /**
-     * Returns user list
-     *
-     * @return array
-     */
-    public function getUserListAction()
-    {
+<?php 
+	/**
+	* Descripción: Controlador para la entidad ConsultaActividad
+	* Autor: Axel castro
+	* Web: desarrollamos.cl
+	* Fecha: 19-07-2017
+	*/
+	class ConsultaActividadController
+	{	
+		public function __construct(){}
+ 
+		public function index(){
+			echo 'index desde ConsultaActividadController';
+		}
+ 
+		public function register(){
+			echo 'register desde ConsultaActividadConroller';
+		}
+ 
+		public function update(){
+			echo 'update desde ConsultaActividadConroller';
+ 
+		}
+ 
+		public function delete(){
+			echo 'delete desde ConsultaActividadConroller';
+		}
+		
+		public function error(){
+			require_once('Views/ConsultaActividad/error.php');
+		} 
        
-    }
-
-     /**
-     * Updating existing user
-     *
-     * @param string $userId
-     */
-    public function updateUserAction($userId)
-    {
-       
-    }
-
-    /**
-     * Delete an existing user
-     *
-     * @param string $userId
-     */
-    public function deleteUserAction($userId)
-    {
-       
-    }
-}
+	}
+?>

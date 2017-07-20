@@ -1,49 +1,34 @@
 <?php 
-
-namespace App\Controllers;
-/**
- * Operations with Users: CRUD
- */
-class CiudadController extends AbstractController
-{
-/////////////////Variables////////////
-private $idCiudad;
-private $cdNombre;
-private $Provincia_idProvincia;
-/////////////////Propiedades////////////
-
-///////////GET///////////
-
-function getIdCiudad(){return $this->idCiudad;}
-function getcdNombre(){return $this->cdNombre;}
-function getProvincia_idProvincia(){return $this->Provincia_idProvincia;}
-
-///////////SET///////////
-
-function setidCiudad($valor){$this->idCiudad=$valor;}
-function setcdNombre($valor){$this->cdNombre=$valor;}
-function setProvincia_idProvincia($valor){$this->Provincia_idProvincia=$valor;}
-
-
-///////////METODOS////////
-
-function __construct($ic, $nc, $pip){//constructor
-$this->idCiudad=$ic;
-$this->cdNombre=$dc;
-$this->Provincia_idProvincia=$pip;
-
-}
-
-public function agregarCiudad()
-    {
+	/**
+	* Descripción: Controlador para la entidad Ciudad
+	* Autor: Axel castro
+	* Web: desarrollamos.cl
+	* Fecha: 19-07-2017
+	*/
+	class CiudadController
+	{	
+		public function __construct(){}
+ 
+		public function index(){
+			echo 'index desde CiudadController';
+		}
+ 
+		public function register(){
+			echo 'register desde CiudadConroller';
+		}
+ 
+		public function update(){
+			echo 'update desde CiudadConroller';
+ 
+		}
+ 
+		public function delete(){
+			echo 'delete desde CiudadConroller';
+		}
+		
+		public function error(){
+			require_once('Views/Ciudad/error.php');
+		} 
        
-    }
-
-public function obtenerCiudad($ic)
-    {
-       
-    }
-
-}
-
+	}
 ?>

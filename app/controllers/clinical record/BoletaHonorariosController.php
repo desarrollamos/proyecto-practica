@@ -1,62 +1,34 @@
 <?php 
-
-namespace App\Controllers;
-/**
- * Operations with Users: CRUD
- */
-class BoletaHonorarios extends AbstractController
-{
-/////////////////Variables////////////
-private $idBoletaHonorario;
-private $bhDescripcion;
-private $bhValor;
-private $bhTotal;
-private $ConsultaMedica_idConsultaMedica;
-/////////////////Propiedades////////////
-
-///////////GET///////////
-
-function getIdBoletaHonorario(){return $this->idBoletaHonorario;}
-function getBhDescripcion(){return $this->bhDescripcion;}
-function getBhValor(){return $this->bhValor;}
-function getBhTotal(){return $this->bhTotal;}
-function getConsultaMedica_idConsultaMedica() {return $this->ConsultaMedica_idConsultaMedica;}
-///////////SET///////////
-
-function setidBoletaHonorario($valor){$this->idBoletaHonorario=$valor;}
-function setBhDescripcion($valor){$this->bhDescripcion=$valor;}
-function setBhValor($valor){$this->bhValor=$valor;}
-function setBhTotal($valor){$this->bhTotal=$valor;}
-function setConsultaMedica_idConsultaMedica($valor){$this->ConsultaMedica_idConsultaMedica=$valor;}
-
-
-
-///////////METODOS////////
-
-function BoletaHonorarios($idbh, $dbh, $vbh, $tbh, $cic){//constructor
-$this->idBoletaHonorario=$idbh;
-$this->bhDescripcion=$dbh;
-$this->bhValor=$vbh;
-$this->bhTotal=$tbh;
-$this->ConsultaMedica_idConsultaMedica=$cic;
-
-}
-
-public function crearBoletaHonorario()
-    {
+	/**
+	* Descripción: Controlador para la entidad BoletaHonorarios
+	* Autor: Axel castro
+	* Web: desarrollamos.cl
+	* Fecha: 19-07-2017
+	*/
+	class BoletaHonorariosController
+	{	
+		public function __construct(){}
+ 
+		public function index(){
+			echo 'index desde BoletaHonorariosController';
+		}
+ 
+		public function register(){
+			echo 'register desde BoletaHonorariosConroller';
+		}
+ 
+		public function update(){
+			echo 'update desde BoletaHonorariosConroller';
+ 
+		}
+ 
+		public function delete(){
+			echo 'delete desde BoletaHonorariosConroller';
+		}
+		
+		public function error(){
+			require_once('Views/BoletaHonorarios/error.php');
+		} 
        
-    }
-
-public function obtenerBoletaHonorario($idbh)
-    {
-       
-    }
-
-public function emitirBoletaHonorario()
-    {
-       
-    }
-
-}
-
+	}
 ?>
