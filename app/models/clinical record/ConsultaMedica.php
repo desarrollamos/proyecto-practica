@@ -15,6 +15,7 @@ private $HistorialClinico_idHistorialClinico;
 private $Reserva_idReserva;
 private $conn;
 private $consultaMedica;
+
 /////////////////Propiedades////////////
 
 ///////////GET///////////
@@ -43,27 +44,88 @@ $this->cmTitulo=$tcm;
 $this->Empresa_idEmpresa=$eie;
 $this->HistorialClinico_idHistorialClinico=$hcihc;
 $this->Reserva_idReserva=$rir;
+
+
+        $this->ConsultaMedica=array();
+       // Create connection
+       $this->conn=mysqli_connect("localhost","root","","modelopractica1");
+           // Check connection
+           if ($conn->connect_error) {
+               die("Connection failed: " . $conn->connect_error);
+           }
+        }
+   
+
+    public function crearConsultaMedica($icm, $fcm, $tcm, $eie, $hcihc, $rir)
+    {
+         
+        $sql = "INSERT INTO ConsultaMedica (cmFecha , cmTitulo , Empresa_idEmpresa, HistorialClinico_idHistorialClinico, Reserva_idReserva)
+           VALUES ('$fcm' , '$tcm', '$eie', '$hcihc' , '$rir')";
+
+   if ($conn->query($sql) === TRUE) {
+       echo "ConsultaMedica agregado con exito!";
+   } else {
+       echo "Error: " . $sql . "<br>" . $conn->error;
+   }
+
+   $conn->close();
+   
+    }
+
+
+   function modificarConsultaMedica($icm, $fcm, $tcm, $eie, $hcihc, $rir){
+   
+   $sql = "UPDATE ConsultaMedica
+           SET cmFecha='$fcm' , cmTitulo='$tcm' , Empresa_idEmpresa='$eie' ,
+               HistorialClinico_idHistorialClinico='$hcihc' , Reserva_idReserva='$rir'  
+           WHERE idConsultaMedica='$iu'";
+
+   if ($conn->query($sql) === TRUE) {
+       echo "ConsultaMedica modificado con exito!";
+   } else {
+       echo "Error al actualizar los datos: " . $conn->error;
+   }
+
+   $conn->close();
+
+}
+   function obtenerConsultaMedica(){
+   
+   $sql = "SELECT * FROM ConsultaMedica";
+   
+   $result=mysqli_query($this->conn,$sql);
+
+   if ($result) {
+       while($registro=mysqli_fetch_assoc($result)){
+            $this->consultaMedica[]=$registro;
+            }
+            
+            return $this->consultaMedica;
+   } else {
+       echo "error: " . mysqli_errno($this->con) . " -- " . mysqli_error($this->con);
+            die;
+   }
+
+   $conn->close();
+
 }
 
-public function CrearConsultaMedica()
-    {
-       
-    }
 
-public function obtenerConsultaMedica($icm)
-    {
-       
-    }
 
-public function modificarConsultaMedica($icm)
-    {
-       
-    }
+function borrarConsultaMedica(){
+   
+   $sql = "DELETE FROM ConsultaMedica WHERE idConsultaMedica='$icm'";
 
-public function eliminarConsultaMedica($icm)
-    {
-       
-    }
+   if ($conn->query($sql) === TRUE) {
+       echo " Eliminado con exito!";
+   } else {
+       echo "Error al intentar eliminar: " . $conn->error;
+   }
+
+   $conn->close();
+
+}
+
 }
 
 

@@ -1,53 +1,116 @@
 <?php 
 
- class Actividad 
+ class Observaciones 
 {
 /////////////////Variables////////////
-private $idActividad;
-private $acNombre;
-private $acDetalle;
-private $acFechaCreacion;
-private $acFechaEdicion;
+private $idObservaciones;
+private $obDescripcion;
+private $ConsultaMedica_idConsultaMedica;
+private $conn;
+private $observaciones;
 /////////////////Propiedades////////////
 
 ///////////GET///////////
 
-function getIdActividad(){return $this->idActividad;}
-function getAcNombre(){return $this->acNombre;}
-function getAcDetalle(){return $this->acDetalle;}
-function getAcFechaCreacion(){return $this->acFechaCreacion;}
-function getAcFechaEdicion(){return $this->getAcFechaEdicion;}
+function getIdObservaciones(){return $this->idObservaciones;}
+function getobDescripcion(){return $this->obDescripcion;}
+function getConsultaMedica_idConsultaMedica(){return $this->ConsultaMedica_idConsultaMedica;}
+
 ///////////SET///////////
 
-function setIdActividad($valor){$this->idActividad=$valor;}
-function setAcNombre($valor){$this->acNombre=$valor;}
-function setAcDetalle($valor){$this->acDetalle=$valor;}
-function setAcFechaCreacion($valor){$this->acFechaCreacion=$valor;}
-function setAcFechaEdicion($valor){$this->acFechaEdicion=$valor;}
-
+function setIdObservaciones($valor){$this->idObservaciones=$valor;}
+function setobDescripcion($valor){$this->obDescripcion=$valor;}
+function setConsultaMedica_idConsultaMedica($valor){$this->ConsultaMedica_idConsultaMedica=$valor;}
 
 
 ///////////METODOS////////
 
-function __construct($ia, $na, $da, $fca, $fea){//constructor
-$this->idActividad=$ia;
-$this->acNombre=$na;
-$this->acDetalle=$da;
-$this->acFechaCreacion=$fca;
-$this->acFechaEdicion=$fea;
+function __construct($io, $od, $da){//constructor
+$this->idObservaciones=$io;
+$this->obDescripcion=$od;
+$this->ConsultaMedica_idConsultaMedica=$da;
+
+
+   
+           $this->Observaciones=array();
+       // Create connection
+       $this->conn=mysqli_connect("localhost","root","","modelopractica1");
+           // Check connection
+           if ($conn->connect_error) {
+               die("Connection failed: " . $conn->connect_error);
+           }
+        }
+    
+
+    public function crearObservaciones($io, $od, $da)
+    {
+         
+        $sql = "INSERT INTO Observaciones (obDescripcion , ConsultaMedica_idConsultaMedica)
+           VALUES ('$od' , '$da')";
+
+   if ($conn->query($sql) === TRUE) {
+       echo "Agregado con exito!";
+   } else {
+       echo "Error: " . $sql . "<br>" . $conn->error;
+   }
+
+   $conn->close();
+   
+    }
+
+
+   function modificarObservaciones($od,$da){
+   
+   $sql = "UPDATE Observaciones
+           SET obDescripcion='$od' , ConsultaMedica_idConsultaMedica='$da'   
+           WHERE idObservaciones='$io'";
+
+   if ($conn->query($sql) === TRUE) {
+       echo "Modificado con exito!";
+   } else {
+       echo "Error al actualizar los datos: " . $conn->error;
+   }
+
+   $conn->close();
+
+}
+   function obtenerObservaciones(){
+   
+   $sql = "SELECT * FROM Observaciones";
+   
+   $result=mysqli_query($this->conn,$sql);
+
+   if ($result) {
+       while($registro=mysqli_fetch_assoc($result)){
+            $this->observaciones[]=$registro;
+            }
+            
+            return $this->observaciones;
+   } else {
+       echo "error: " . mysqli_errno($this->con) . " -- " . mysqli_error($this->con);
+            die;
+   }
+
+   $conn->close();
 
 }
 
-function crearActividad(){
-    //agregar funcion
-}
-function obtenerActividad(){
-    //agregar funcion
-}
-function modificarActividad(){
-    //agregar funcion
+
+
+function borrarObservaciones(){
+   
+   $sql = "DELETE FROM Observaciones WHERE idObservaciones='$io'";
+
+   if ($conn->query($sql) === TRUE) {
+       echo " Eliminado con exito!";
+   } else {
+       echo "Error al intentar eliminar el Observaciones: " . $conn->error;
+   }
+
+   $conn->close();
 
 }
+
 }
 
 ?>
